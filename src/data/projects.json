@@ -1,0 +1,92 @@
+[
+  {
+    "id": "nsc-events",
+    "title": "NSC Events",
+    "description": "A full-stack web app for creating, publishing, and managing campus events at North Seattle College.",
+    "image": "",
+    "featured": true,
+    "technologies": {
+      "languages": ["TypeScript", "HTML", "CSS"],
+      "frameworks": ["React", "Next.js", "NestJS", "Node.js"],
+      "libraries": ["Material UI"],
+      "databases": ["MongoDB"],
+      "hosting": ["AWS EC2", "AWS S3"],
+      "tools": ["Git"],
+      "architecture": ["REST API", "Full Stack"]
+    },
+    "tags": [
+      "React",
+      "Next.js",
+      "NestJS",
+      "TypeScript",
+      "AWS",
+      "MongoDB",
+      "REST API",
+      "Full Stack",
+      "Web App"
+    ],
+    "links": {
+      "github": "https://github.com/SeattleColleges/nsc-events-nextjs",
+      "demo": null
+    }
+  },
+  {
+    "id": "buttsborg",
+    "title": "ButtsBorg",
+    "description": "A Twitch chat bot that dynamically mirrors user messages with randomized syllable modifications for an interactive chat experience.",
+    "image": "",
+    "featured": false,
+    "technologies": {
+      "languages": ["Python"],
+      "frameworks": ["Twitch.io"],
+      "libraries": ["Twitch.io"],
+      "databases": ["Local JSON"],
+      "hosting": ["AWS EC2"],
+      "tools": ["Git"],
+      "architecture": ["Event-Driven"]
+    },
+    "tags": ["Python", "Twitch Bot", "Chat Automation", "AWS"],
+    "links": {
+      "github": "https://github.com/bennettsf/ButtsBorg",
+      "demo": null
+    }
+  },
+  {
+    "id": "portfolio",
+    "title": "Developer Portfolio",
+    "description": "A responsive web portfolio built with Vite, React, TypeScript, and Chakra UI to showcase projects, skills, and professional experience.",
+    "image": "",
+    "featured": true,
+    "technologies": {
+      "languages": ["TypeScript", "HTML", "CSS"],
+      "frameworks": ["React", "Vite"],
+      "libraries": ["Chakra UI"],
+      "tools": ["Git"],
+      "architecture": []
+    },
+    "tags": ["React", "Vite", "TypeScript", "Portfolio", "Chakra UI", "Responsive Design"],
+    "links": {
+      "github": "https://github.com/bennettsf/portfolio",
+      "demo": null
+    }
+  },
+  {
+    "id": "wordgame",
+    "title": "Word Game",
+    "description": "A word finding game build with Django. Players form words from a random set of letters to score points.",
+    "image": "",
+    "featured": false,
+    "technologies": {
+      "languages": ["Python", "HTML", "CSS"],
+      "frameworks": ["Django"],
+      "libraries": ["PyDictionary"],
+      "tools": ["Git"],
+      "architecture": []
+    },
+    "tags": ["Python", "Django", "Web App", "Game"],
+    "links": {
+      "github": "https://github.com/bennettsf/WordGame",
+      "demo": null
+    }
+  }
+]
