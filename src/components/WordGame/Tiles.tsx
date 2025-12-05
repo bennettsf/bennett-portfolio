@@ -50,8 +50,8 @@ function Tiles({ letters }: TilesProps) {
           alignItems="center"
           justifyContent="center"
           fontSize="4xl"
-          width="60px"
-          height="60px"
+          width={{ base: '40px', md: '50px' }}
+          height={{ base: '40px', md: '50px' }}
           bg={isSelected ? '#646CFF' : 'transparent'}
           transition="background-color 0.5s ease-in-out, transform 0.2s ease-in-out"
           _hover={{

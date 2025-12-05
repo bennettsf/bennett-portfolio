@@ -1,0 +1,46 @@
+import { Box, Heading, List } from '@chakra-ui/react';
+import { useColorMode } from '../ui/color-mode';
+
+function RulesSection() {
+  const { colorMode } = useColorMode();
+
+  return (
+    <Box
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+      textAlign="left"
+      p={6}
+      border="2px solid #14b8a6"
+      borderRadius="md"
+      width="100%"
+      bg={colorMode === 'light' ? 'gray.50' : 'gray.800'}
+    >
+      <Heading as="h3" size="lg" mb={4} textAlign="center">
+        How to Play
+      </Heading>
+      <List.Root gap={3} fontSize="md">
+        <List.Item>
+          <strong>Select tiles</strong> to form words by clicking on the grid
+        </List.Item>
+        <List.Item>
+          <strong>Path</strong> of the selected tiles does not matter!
+        </List.Item>
+        <List.Item>
+          <strong>Click again</strong> on a selected tile to deselect it and all tiles after it
+        </List.Item>
+        <List.Item>
+          <strong>Submit</strong> your word to add it to your guesses (max 5 words)
+        </List.Item>
+        <List.Item>
+          <strong>Score points</strong> based on letter values - aim for the highest total!
+        </List.Item>
+        <List.Item>
+          <strong>Beat your high score</strong> and challenge yourself with new letter combinations
+        </List.Item>
+      </List.Root>
+    </Box>
+  );
+}
+
+export default RulesSection;

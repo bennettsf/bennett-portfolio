@@ -8,7 +8,13 @@ export function GuessesSection() {
   const storedHighScore = localStorage.getItem('wordGameHighScore');
 
   return (
-    <Box minW="250px" display="flex" flexDirection="column" textAlign="center">
+    <Box
+      height="100%"
+      display="flex"
+      flexDirection="column"
+      justifyContent="space-between"
+      textAlign="center"
+    >
       <Heading as="h2" mb={4}>
         {guesses.length}/5 Words:
       </Heading>
@@ -37,7 +43,7 @@ export function GuessesSection() {
             </Box>
           ))}
         </Box>
-        <Box>
+        <Box display="flex" flexDirection="column" gap={2}>
           <Box>Total: {pointTotal}</Box>
           <Box>Highscore: {storedHighScore ? storedHighScore : highScore}</Box>
         </Box>
