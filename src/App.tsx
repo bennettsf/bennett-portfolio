@@ -5,6 +5,7 @@ import ProjectsSection from './components/Projects/ProjectsSection';
 import ContactSection from './components/WordGame/WordGameSection';
 import { WordGuessesProvider } from './context/WordGuessesContext';
 import { SelectedTilesProvider } from './context/SelectedTilesContext';
+import { SelectedTagsProvider } from './context/SelectedTagsContext';
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
         <Box>
           <Header />
           <LandingSection />
-          <ProjectsSection />
+          <SelectedTagsProvider>
+            <ProjectsSection />
+          </SelectedTagsProvider>
           <ContactSection />
         </Box>
       </SelectedTilesProvider>

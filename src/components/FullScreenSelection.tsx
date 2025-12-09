@@ -24,7 +24,7 @@ const FullScreenSection: React.FC<FullScreenSectionProps> = ({ children, maxW, .
       color={color}
       {...boxProps} // still passes any extra props from parent
     >
-      <Box minHeight="100vh" maxW={maxW ? maxW : ''} gap={8}>
+      <Box minHeight="100vh" maxW={maxW ? maxW : ''} gap={8} mx={5}>
         {children}
       </Box>
     </VStack>
