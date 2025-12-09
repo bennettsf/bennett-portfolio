@@ -13,7 +13,7 @@ const ProjectsSection = () => {
 
   return (
     <FullScreenSection maxW="1280px" textAlign="center" alignItems="center" py={16}>
-      <Box display="flex" flexDirection="column" gap={8}>
+      <Box display="flex" flexDirection="column" justifyContent="space-evenly" gap={8}>
         <Heading size={{ md: '4xl', sm: '3xl' }} id="projects-section">
           Featured Projects
         </Heading>

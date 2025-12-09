@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Heading } from '@chakra-ui/react';
 import FullScreenSection from '../FullScreenSelection';
 import RulesSection from './RulesSection';
 import { GuessesSection } from './GuessSection';
@@ -8,8 +8,15 @@ import { useColorMode } from '../ui/color-mode';
 const WordGameSection = () => {
   const { colorMode } = useColorMode();
   return (
-    <FullScreenSection id="word-game-section">
+    <FullScreenSection
+      maxW="1280px"
+      textAlign="center"
+      alignItems="center"
+      py={16}
+      id="word-game-section"
+    >
       <Box display="flex" flexDirection="column" justifyContent="space-evenly" p={5} gap={5}>
+        <Heading size={{ md: '4xl', sm: '3xl' }}>Word Game</Heading>
         <RulesSection />
         <Box
           className="word-game"

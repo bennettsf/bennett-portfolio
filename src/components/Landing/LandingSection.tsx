@@ -37,7 +37,7 @@ const LandingSection = () => {
           height="100%"
           display="flex"
           flexDirection="column"
-          gap={75}
+          gap={51}
         >
           <Text fontSize="2xl" className="typewriter ">
             {firstLine.displayedText}
