@@ -15,12 +15,10 @@ interface FullScreenSectionProps extends StackProps {
  * - Passes additional Chakra props via spread operator
  */
 const FullScreenSection: React.FC<FullScreenSectionProps> = ({ children, maxW, ...boxProps }) => {
-  const bg = useColorModeValue('gray.50', 'gray.800');
   const color = useColorModeValue('black', 'white');
 
   return (
     <VStack
-      bg={bg}
       color={color}
       {...boxProps} // still passes any extra props from parent
     >

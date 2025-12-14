@@ -27,7 +27,6 @@ const WordGameSection = () => {
           p={6}
           border="2px solid #14b8a6"
           borderRadius="md"
-          bg={colorMode === 'light' ? 'gray.50' : 'gray.800'}
         >
           <GuessesSection />
           <WordGame />

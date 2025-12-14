@@ -14,7 +14,6 @@ function RulesSection() {
       border="2px solid #14b8a6"
       borderRadius="md"
       width="100%"
-      bg={colorMode === 'light' ? 'gray.50' : 'gray.800'}
     >
       <Heading as="h3" size="lg" mb={4} textAlign="center">
         How to Play

@@ -98,7 +98,9 @@ const Header: React.FC = () => {
       insetX={0}
       top={0}
       zIndex={10}
-      backgroundColor={colorMode === 'dark' ? 'gray.800' : 'gray.50'}
+      backgroundColor={
+        colorMode === 'dark' ? 'rgba(26, 32, 44, 0.75)' : 'rgba(247, 250, 252, 0.75)'
+      }
       transition="transform 0.3s ease-in-out"
     >
       <nav className="container">
@@ -117,7 +119,17 @@ const Header: React.FC = () => {
             </div>
           ))}
         </Box>
-        <Box className={`nav-container ${isMenuOpen ? 'open' : ''}`} gap={8}>
+        <Box
+          className={`nav-container ${isMenuOpen ? 'open' : ''}`}
+          backgroundColor={
+            isMenuOpen
+              ? colorMode === 'dark'
+                ? 'rgba(26, 32, 44, 0.95)'
+                : 'rgba(247, 250, 252, 0.95)'
+              : 'none'
+          }
+          gap={8}
+        >
           {navLinks.map((navLink) => (
             <div key={navLink.label} className={navLink.name}>
               <ChakraLink
@@ -145,6 +157,7 @@ const Header: React.FC = () => {
           className="hamburger"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
+          style={{ color: '#14b8a6' }}
         >
           {isMenuOpen ? <FaTimes size={28} /> : <FaBars size={28} />}
         </button>

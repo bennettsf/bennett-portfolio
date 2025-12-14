@@ -11,7 +11,7 @@ function ProjectCard({ project }: { project: Project }) {
   return (
     <GridItem
       colSpan={{ base: 1, md: project.featured ? 2 : 1 }}
-      backgroundColor={cardBg}
+      opacity={0.95}
       display="flex"
       flexWrap="wrap"
     >
