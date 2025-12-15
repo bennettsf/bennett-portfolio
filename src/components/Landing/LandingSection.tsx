@@ -15,7 +15,7 @@ const LandingSection = () => {
     startDelay: firstLine.isComplete ? 0 : 999999,
   });
 
-  const slideInDelayedClass = secondLine.isComplete ? 'slide-in-left' : 'slide-in-hidden';
+  const slideInLeftClass = secondLine.isComplete ? 'slide-in-left' : 'slide-in-hidden';
   // const slideInClass = secondLine.isComplete ? 'slide-in-left-delayed' : 'slide-in-hidden';
   const slideInRightClass = secondLine.isComplete ? 'slide-in-right' : 'slide-in-right-hidden';
 
@@ -23,12 +23,12 @@ const LandingSection = () => {
     <FullScreenSection id="home-section">
       <Box
         pt="72px"
-        w="100%"
         minH="100vh"
+        width="100%"
+        maxW="90vw"
         display="flex"
         flexDirection={{ base: 'column', lg: 'row' }}
-        justifyContent="center"
-        alignContent="center"
+        justifyContent="space-between"
         overflow="hidden"
       >
         <Box
@@ -46,22 +46,22 @@ const LandingSection = () => {
             {secondLine.displayedText}
             {secondLine.isComplete && <span className="char-blink">.</span>}
           </Text>
-          <Box display="flex" flexDirection="column" gap={10}>
-            <Text className={slideInDelayedClass} fontSize="xl" maxWidth="600px">
+          <Box display="flex" flexDirection="column" className={slideInLeftClass} gap={10}>
+            <Text  fontSize="xl" maxWidth="600px">
               I'm from <strong>Seattle, WA</strong> and some of my interests include{' '}
               <strong>coding</strong>, <strong>gaming</strong>, <strong>movies</strong>, and{' '}
               <strong>baseball</strong>.
             </Text>
-            <Text className={slideInDelayedClass} fontSize="xl" maxWidth="600px">
+            <Text  fontSize="xl" maxWidth="600px">
               I specialize in building web applications using modern technologies like{' '}
               <strong>React</strong>, <strong>Node.js</strong>, and <strong>TypeScript</strong>
               .{' '}
             </Text>
-            <Text className={slideInDelayedClass} fontSize="xl" maxWidth="600px">
+            <Text  fontSize="xl" maxWidth="600px">
               Below, you can find some of the <u>projects</u> I've worked on as well as a fun{' '}
               <u>word game</u> I built!
             </Text>
-            <Text className={slideInDelayedClass} fontSize="xl" maxWidth="600px">
+            <Text  fontSize="xl" maxWidth="600px">
               Feel free to reach out to me through any of my socials above!
             </Text>
           </Box>

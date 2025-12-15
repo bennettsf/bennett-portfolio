@@ -5,7 +5,6 @@ import { useColorModeValue } from './ui/color-mode';
 
 interface FullScreenSectionProps extends StackProps {
   children: ReactNode;
-  maxW?: string;
 }
 
 /**
@@ -14,17 +13,17 @@ interface FullScreenSectionProps extends StackProps {
  * - Sets background/text color according to color mode
  * - Passes additional Chakra props via spread operator
  */
-const FullScreenSection: React.FC<FullScreenSectionProps> = ({ children, maxW, ...boxProps }) => {
+const FullScreenSection: React.FC<FullScreenSectionProps> = ({ children, ...boxProps }) => {
   const color = useColorModeValue('black', 'white');
 
   return (
     <VStack
       color={color}
+      minHeight="100vh"
+      gap={8}
       {...boxProps} // still passes any extra props from parent
     >
-      <Box minHeight="100vh" maxW={maxW ? maxW : ''} gap={8} mx={5}>
-        {children}
-      </Box>
+      {children}
     </VStack>
   );
 };

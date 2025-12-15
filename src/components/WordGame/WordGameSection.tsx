@@ -10,11 +10,13 @@ const WordGameSection = () => {
   const colorMode = useColorModeValue('black', 'white');
   return (
     <FullScreenSection
-      maxW="1280px"
       textAlign="center"
       alignItems="center"
+      display="flex"
+      justifyContent="center"
       py={4}
       id="word-game-section"
+      width="100%"
     >
       <Box display="flex" flexDirection="column" justifyContent="space-evenly" p={5} gap={5}>
         <Heading size={{ md: '4xl', sm: '3xl' }}>Word Game</Heading>

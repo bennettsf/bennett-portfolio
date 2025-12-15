@@ -7,7 +7,9 @@ function Footer() {
 
   return (
     <Box as="footer" className="footer" borderColor={colorMode} color={colorMode}>
-      <Text>© {new Date().getFullYear()} Bennett Fife. All rights reserved.</Text>
+      <Text>
+        © {new Date().getFullYear()} <a href="">Bennett Fife</a>. All rights reserved.
+      </Text>
       <Text>Built with React and Chakra UI.</Text>
     </Box>
   );

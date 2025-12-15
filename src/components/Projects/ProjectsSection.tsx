@@ -20,13 +20,21 @@ const ProjectsSection = () => {
 
   return (
     <FullScreenSection
-      maxW="1280px"
       textAlign="center"
-      alignItems="center"
       py={16}
       id="projects-section"
+      width="100%"
+      display="flex"
+      justifyContent="center"
     >
-      <Box display="flex" flexDirection="column" justifyContent="space-evenly" gap={8}>
+      <Box
+        display="flex"
+        flexDirection="column"
+        justifyContent="space-evenly"
+        gap={8}
+        maxWidth="80%"
+        width="100%"
+      >
         <Heading size={{ md: '4xl', sm: '3xl' }}>Featured Projects</Heading>
         <ProjectTags />
         {/* Render project cards here using the projects state */}
