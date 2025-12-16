@@ -53,10 +53,10 @@ function Tiles({ letters }: TilesProps) {
           width={{ base: '50px', md: '60px' }}
           height={{ base: '50px', md: '60px' }}
           bg={isSelected ? '#646CFF' : 'transparent'}
-          transition="background-color 0.5s ease-in-out, transform 0.2s ease-in-out"
+          transition="background-color 0.1s ease-in-out, transform 0.2s ease-in-out"
           _hover={{
             bg: '#646CFF',
-            transform: 'translateY(-3px)',
+            transform: 'translateY(-2px)',
           }}
           boxShadow="3px 4px 3px 0 rgba(0, 0, 0, 0.25)"
           cursor="pointer"

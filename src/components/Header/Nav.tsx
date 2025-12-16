@@ -13,7 +13,8 @@ import {
 } from 'react-icons/fa';
 import { LuMoon, LuSun } from 'react-icons/lu';
 import { useColorMode } from '../ui/color-mode';
-import './Header.css';
+import './Nav.css';
+import { HashLink } from 'react-router-hash-link';
 
 interface Social {
   icon: JSX.Element;
@@ -82,15 +83,6 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleClick = (anchor: string) => () => {
-    const id = `${anchor}-section`;
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsMenuOpen(false); // Close menu after navigation
-  };
-
   return (
     <Box
       ref={headerRef}
@@ -130,18 +122,22 @@ const Header: React.FC = () => {
           gap={8}
         >
           {navLinks.map((navLink) => (
-            <div key={navLink.label} className={navLink.name}>
-              <ChakraLink
-                color={colors.text}
-                fontSize={fontSize}
-                _hover={{ color: colors.textHover }}
-                transition="color 0.2s ease-in-out"
-                onClick={handleClick(navLink.label)}
+            <Box key={navLink.label} className={navLink.name} fontSize={fontSize}>
+              <HashLink
+                smooth
+                id={navLink.label}
+                to={`#${navLink.label}-section`}
+                className="nav-hash-link"
+                style={{
+                  color: '#14b8a6',
+                  transition: 'color 0.2s ease-in-out',
+                }}
+                onClick={() => setIsMenuOpen(false)}
               >
                 {navLink.icon}
                 {navLink.text}
-              </ChakraLink>
-            </div>
+              </HashLink>
+            </Box>
           ))}
           <ChakraLink>
             {colorMode === 'dark' ? (
